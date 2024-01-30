@@ -1,9 +1,9 @@
-import Login from "./login/page";
+import Home from "../app/home/page";
 
-export default function Home() {
+export default function Main() {
   return (
-    <div className="flex justify-center bg-white">
-      <Login/>
+    <div className="">
+      <Home/>
     </div>
   );
 }
