@@ -10,7 +10,9 @@ const UserSchema = new mongoose.Schema({
     phone_number: Number,
     avatar_img: Buffer,
     role: {
-        enum: ['admin', 'user']
+        type: String,
+        enum: ['admin', 'user'],
+        default: "user"
     }
 })
 const userModel = mongoose.model('food delivery user', UserSchema)

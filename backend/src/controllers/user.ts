@@ -1,11 +1,15 @@
-import bcrypt from "bcrypt";
+import bcrypt, { genSalt } from "bcrypt";
 import { Request, Response } from "express";
 import { userModel } from "../models/user";
 
 const createUser = async (req:Request, res:Response) => {
     try {
       const { name, email, password, phone_number,role } = req.body;
-      const hashedPassword = await bcrypt.hash(password, 10);
+
+      const saltRounds = 10;
+      const salt = await bcrypt.genSalt(saltRounds);
+      const hashedPassword = await bcrypt.hash(password, salt);
+
       const newUser = new userModel({
         name,
         email,
