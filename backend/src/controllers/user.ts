@@ -1,6 +1,7 @@
 import bcrypt, { genSalt } from "bcrypt";
 import { Request, Response } from "express";
 import { userModel } from "../models/user";
+import { decrypt } from "dotenv";
 
 const createUser = async (req:Request, res:Response) => {
     try {
@@ -24,5 +25,23 @@ const createUser = async (req:Request, res:Response) => {
       res.status(500).json({ error: 'Internal Server Error' });
     }
   };
+
+
+export const login = async (req: Request, res: Response) => {
+  try {
+    const { email, password } = req.body;
+    const user = await userModel.findOne({email});
+    if (!user) {
+      return res.status(404).send( {msg: "user not found"});
+    }
+    const isValid = bcrypt.compare(password, user.password as string)
+
+    if (!isValid){
+      return res.status(400).send({msg:"username or password incorrect"})
+    }
+  } catch(error) {
+    return res.status(400).send({error});
+  }
+}
 
   export {createUser}

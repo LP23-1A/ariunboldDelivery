@@ -2,7 +2,6 @@
 import Footer from "@/components/Footer";
 import TopBar from "../../components/TopBar";
 import TextField from '@mui/material/TextField';
-import InputAdornments from "@/components/Input";
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
 import React, { useState } from "react";
@@ -36,7 +35,7 @@ export default function Login(){
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(event.target.checked);
-  };
+    };
     return(
         <Box sx={{display: "flex", flexDirection: "column", alignItems: "center", gap: "75px", background: "white"}}>
             <TopBar/>
