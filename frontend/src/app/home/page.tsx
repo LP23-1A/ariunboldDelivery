@@ -2,6 +2,8 @@ import Benefits from "@/components/Benefits";
 import TopBar from "../../components/TopBar";
 import Footer from "@/components/Footer";
 import BackPicture from "@/components/icons/BackPicture";
+import Foods from "@/components/Foods";
+import Star from "@/components/icons/Star";
 
 export default function Home() {
   return (
@@ -32,6 +34,19 @@ export default function Home() {
         <BackPicture />
       </div>
       <Benefits/>
+      <div className="flex flex-col gap-[24px]">
+        <div className="flex justify-between">
+          <div className="flex items-center gap-[8px]">
+            <Star/>
+            <p className="text-[22px] text-black">Үндсэн хоол</p>
+          </div>
+          <button className="text-[#18BA51] text-[14px]">
+            Бүгдийг харах
+          </button>
+        </div>
+        <Foods/>
+      </div>
+      
       <Footer />
     </div>
   );

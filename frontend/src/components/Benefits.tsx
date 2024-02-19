@@ -31,9 +31,9 @@ const mockData = [
 
 export default function Benefits(){
     return (
-        <div className="gap-[48px] my-[120px] flex">
+        <div className="gap-[30px] my-[120px] flex">
         {mockData.map((el) => (
-            <div className="rounded-[16px] border-[1px] p-[25px] drop-shadow-[4px_4px_12px_0px_rgba(0,0,0,0.7)]">
+            <div className="rounded-[16px] border-[1px] p-[25px] shadow-[4px_4px_12px_0_rgba(0,0,0,0.3)]">
                 {el.icon}
                 <div className="flex flex-col items-start pt-[24px]">
                     <p className="text-[#272727] text-[18px]">{el.title}</p>

@@ -1,17 +1,19 @@
 import mongoose from "mongoose";
  
-const UserSchema = new mongoose.Schema({
-    name: String,
-    email: {
+const FoodSchema = new mongoose.Schema({
+    id:{},
+    name: {
         type: String,
-        unique: true
+        length: {
+            min: 2,
+        }, 
+        required: true
     },
+    img: Buffer,
     password: String,
-    phone_number: Number,
-    avatar_img: Buffer,
-    role: {
-        enum: ['admin', 'user']
-    }
+    ingeredient: String,
+    price: Int16Array,
+    discount: Int16Array,
 })
-const userModel = mongoose.model('food delivery user', UserSchema)
-export { userModel }
+const foodModel = mongoose.model('food delivery food', FoodSchema)
+export { foodModel }
