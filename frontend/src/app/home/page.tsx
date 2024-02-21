@@ -33,7 +33,9 @@ export default function Home() {
         </div>
         <BackPicture />
       </div>
+
       <Benefits/>
+
       <div className="flex flex-col gap-[24px]">
         <div className="flex justify-between">
           <div className="flex items-center gap-[8px]">
@@ -46,7 +48,7 @@ export default function Home() {
         </div>
         <Foods/>
       </div>
-      
+        
       <Footer />
     </div>
   );
