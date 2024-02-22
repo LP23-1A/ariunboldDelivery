@@ -65,7 +65,7 @@ export default function FoodMenu(){
                 <button className="rounded-[8px] border-[1px] w-[280px] h-[43px]">Main Course</button>
                 <button className="rounded-[8px] border-[1px] w-[280px] h-[43px]">Dessert</button>
             </div>
-            <div className="flex gap-[24px] flex-wrap px-[170px] items-center justify-between">
+            <div className="flex gap-[24px] flex-wrap items-center justify-between w-[1200px]">
                 {
                     MockData.map((el) => {
                         return (

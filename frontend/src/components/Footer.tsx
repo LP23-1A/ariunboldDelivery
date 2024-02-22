@@ -1,3 +1,4 @@
+'use client';
 import { useRouter } from "next/navigation";
 import BackPicture from "./icons/BackPicture";
 import Facebook from "./icons/Facebook";
@@ -21,6 +22,14 @@ export default function Footer(){
         router.push("/secure");
     }
 
+    const foodMenu = () => {
+        router.push("/foodMenu");
+    }
+
+    const home = () => {
+        router.push("/home");
+    }
+
     return (
         <div className="bg-[#18BA51] flex flex-col gap-[40px] px-[120px] py-[111px] relative">
             <BackPicture/>
@@ -29,9 +38,9 @@ export default function Footer(){
                 <p className="text-[20px] text-white">Food Delivery</p>
             </div>
             <div className="flex justify-between z-50">
-                <button className="text-white text-[16px] underline">Нүүр</button>
+                <button onClick={home} className="text-white text-[16px] underline">Нүүр</button>
                 <button className="text-white text-[16px] underline">Холбоо барих</button>
-                <button className="text-white text-[16px] underline">Хоолны цэс</button>
+                <button onClick={foodMenu} className="text-white text-[16px] underline">Хоолны цэс</button>
                 <button onClick={terms} className="text-white text-[16px] underline">Үйлчилгээний нөхцөл</button>
                 <button onClick={area} className="text-white text-[16px] underline">Хүргэлтийн бүс</button>
                 <button onClick={secure} className="text-white text-[16px] underline">Нууцлалын бодлого</button>

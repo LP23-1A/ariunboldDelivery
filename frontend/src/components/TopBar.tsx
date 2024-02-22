@@ -9,6 +9,10 @@ export default function TorBar(){
 
     const router = useRouter();
 
+    const area = () => {
+        router.push("/area")
+    }
+
     const handler = () => {
         router.push("/foodMenu")
     }
@@ -20,7 +24,7 @@ export default function TorBar(){
                 <div className="flex gap-[8px]">
                     <button className="text-[#18BA51] text-[14px] px-[16px] py-[8px]">НҮҮР</button>
                     <button onClick={handler} className="text-[14px] text-black px-[16px] py-[8px]">ХООЛНЫ ЦЭС</button>
-                    <button className="text-[14px] text-black px-[16px] py-[8px]">ХҮРГЭЛТИЙН БҮС</button>
+                    <button onClick={area} className="text-[14px] text-black px-[16px] py-[8px]">ХҮРГЭЛТИЙН БҮС</button>
                 </div>
             </div>
             <div className="flex justify-center items-center gap-[8px]">
