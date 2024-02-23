@@ -1,19 +1,25 @@
-import mongoose from "mongoose";
- 
+import mongoose from 'mongoose';
+
 const FoodSchema = new mongoose.Schema({
-    id:{},
-    name: {
-        type: String,
-        length: {
-            min: 2,
-        }, 
-        required: true
-    },
-    img: Buffer,
-    password: String,
-    ingeredient: String,
-    price: Int16Array,
-    discount: Int16Array,
-})
-const foodModel = mongoose.model('food delivery food', FoodSchema)
-export { foodModel }
+  name: {
+    type: String,
+    required: true,
+  },
+  image: {
+    type: String,
+  },
+  ingeredient: {
+    type: String,
+  },
+  price: {
+    type: Number,
+  },
+  discount: {
+    type: Number,
+    default: 0,
+  },
+});
+
+const FoodModel = mongoose.model('foods', FoodSchema);
+
+export { FoodModel };

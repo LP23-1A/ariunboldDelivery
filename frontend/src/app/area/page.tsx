@@ -2,6 +2,7 @@
 import Footer from "@/components/Footer";
 import TopBar from "../../components/TopBar";
 import Star from "@/components/icons/Star";
+import { useId } from "react";
 
 export default function Area(){
     const locations = ["Нархан хотхон", "26-р байр", "26-р байр", "45-р байр", "3-р байр", "Хоймор хотхон", "Хоймор хотхон"]
@@ -22,12 +23,12 @@ export default function Area(){
                             <div className="flex w-[100%]">
                                 <div className="w-[50%] flex flex-col gap-[16px]">
                                     {locations.map((el) => (
-                                        <p className="text-[16px]">{el}</p>
+                                        <p key={useId()} className="text-[16px]">{el}</p>
                                     ))}
                                 </div>
                                 <div className="w-[50%] flex flex-col gap-[16px]">
                                     {locations.map((el) => (
-                                        <p className="text-[16px]">{el}</p>
+                                        <p key={useId()} className="text-[16px]">{el}</p>
                                     ))}
                                 </div>
                             </div>
@@ -38,12 +39,12 @@ export default function Area(){
                             <div className="flex w-[100%]">
                                 <div className="w-[50%] flex flex-col gap-[16px]">
                                     {locations.map((el) => (
-                                        <p className="text-[16px]">{el}</p>
+                                        <p key={useId()} className="text-[16px]">{el}</p>
                                     ))}
                                 </div>
                                 <div className="w-[50%] flex flex-col gap-[16px]">
                                     {locations.map((el) => (
-                                        <p className="text-[16px]">{el}</p>
+                                        <p key={useId()} className="text-[16px]">{el}</p>
                                     ))}
                                 </div>
                             </div>
