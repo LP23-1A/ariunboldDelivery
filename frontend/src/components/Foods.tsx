@@ -44,7 +44,8 @@ export default function Foods(){
         boxShadow: 2,
         p: 4,
         display: "flex",
-        gap: "30px"
+        gap: "30px",
+        borderRadius: '8px'
     };
 
     const [open, setOpen] = React.useState(false);
@@ -91,7 +92,7 @@ export default function Foods(){
                                             <Box sx={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                                                 <Button onClick={minus} sx={{color: "white", background: "#18BA51"}}>-</Button>
                                                 <Typography>
-                                                    {count}
+                                                    {count} 
                                                 </Typography>
                                                 <Button onClick={add} sx={{color: "white", background: "#18BA51"}}>+</Button>
                                             </Box>
